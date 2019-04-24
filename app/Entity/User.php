@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Entity;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -8,6 +8,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    public const ROLE_USER = 1;
+
+    public const STATUS_ACTIVE = 1;
+    public const STATUS_WAIT = 2;
+
     use Notifiable;
 
     /**

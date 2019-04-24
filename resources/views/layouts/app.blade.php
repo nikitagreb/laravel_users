@@ -83,6 +83,7 @@
         <main class="py-4">
             <div class="container">
                 {!! Breadcrumbs::render() !!}
+                @include('layouts.partials.flash')
             </div>
             @yield('content')
         </main>
